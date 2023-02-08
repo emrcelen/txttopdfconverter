@@ -1,0 +1,189 @@
+╔══════════════════════════════════════════════════════════╗
+ ► Java 8 Features (2014 Mart (LTS))
+
+ » Functional Interfaces
+ • Lambda ifadelerini uygulayabilmek için getirilen arayüzler ile javanın functional programming yetenekleri geliştirilmeye başlandı.
+
+ » Lambda expressions 
+ • Herhangi bir sınıfa ait olmadan iş yapabilen pratik fonksiyonlar olan Lambda ifadeler ile birlikte Java, funtional programming dünyasına da girmiş oldu.
+
+ » Method References 
+ • Metodları, nesneler veya primitive değerlermiş gibi kullanabilmemizi ve bunları başka bir metoda parametre olarak gönderebilmemizi sağlıyor.
+ • :: söz dizimi aracılığıyla static methodlar class name ile, static olmayan methodlar ise instance objeleri ile referans verilebilmekte.
+
+ » Stream API 
+ • Collection’lar üzerinde filter, forEach, map, count, min/max gibi sık kullanılan çeşitli işlemleri yapmayı çok daha kolay hale getiriyor.
+
+ » Try-With Resources 
+ • File, connection, network vb. açık kaynakları kapatmaya gerek duymadan, AutoClosable interface ile dene-kullan-kapat şeklinde otomatik olarak kapanacak bir kullanım imkan sağlar.
+ 
+ » Optional Class
+ • Nesnelerin kullanılmadan önce yapılan NullCheck işlemlerini daha okunabilir ve kontrol edilebilir olmasını sağlayan Optional<T> utility sınıfını sağlıyor.
+
+ » Date and Time API
+ • Tarih ve saat verilerinin daha doğal, net ve anlaşılması kolay şekilde elde edilmesini sağlıyor.
+
+ » Concurrency Improvements
+ • Thread nesneleri oluşturmak ve yönetmek zorunda kalma eşzamanlı concurrent/multitasking işlemlerini daha anlaşılır ve kolay kullanılabilir hale getiriyor.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 9 Features (2017 Eylül)
+
+ » Platform Module System (Project Jigsaw)
+ • Modul sistemli projelerin geliştirilmesi, önceden maven, gradle gibi ek araçlarla gerçekleştirilebilirken bu özellik ile ek bi yapıya gerek duymadan da yapılabiliyor.
+
+ » Factory Methods for Immutable Collections
+ • List, Set and Map gibi collection’ların basit şekilde initialize edilmesi için .of(...) keyword kullanımını sağlar.
+
+ » Anonymous Inner Class — Diamond Operator Extension
+ • Anonim sınıflarda diamond operatörü <> kullanmamızı sağlar.
+
+ » HTTP/2 Client
+ • HttpURLConnection API yerine artık daha iyi şekilde bağlantı kurmayı sağlayan bu özellik ile HttpClient, HttpRequest, HttpResponse sınıfları java içerisine eklenerek daha kolay bir kullanım sağlandı.
+
+ » JShell (the interactive Java REPL(Read-Eval-Print Loop))
+ • Komut satırında java kodu çalıştırmayı sağlayan interaktif shell tool.
+
+ » Platform Logging API and Service
+ • Java.util.logging API service interface ile tüm platform log mesajlarının günlüğe kaydedilmesine ve Logger ile birlikte kullanılması sağlandı.
+
+ » Lightweight JSON
+ • JSON verilerini ayrıştırmak, oluşturmak ve tüketmek için java.util paketi aracılığıyla, lightweight bir JSON API’si sağlar.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 10 Features (2018 Mart)
+
+ » Local-Variable Type Inference With var
+ • Yerel değişken oluşturma ve atama işlemlerinde değişkenin türünü atlamaya izin veren yeni var anahtar sözcüğü kullanarak tür çıkarımı sağlar.
+
+ » Application Data-Class Sharing
+ • Mevcut Sınıf-Veri Paylaşımı (Class-Data Sharing (CDS)) özelliğini application sınıflarının paylaşılan arşive yerleştirilmesine izin verecek şekilde genişletir. Önyükleme süresinin kritik olduğu sunucusuz mimaride sorun yaşamamak adına, uygulama başlatma süresini azaltmak için kullanılabilir.
+
+ » Unmodifiable Collections and copyOf() method
+ • Değiştirilemez collection’lar desteklenerek, List-Map-Set için copyOf(Collection) static metodu ile değişirilemez bir kopya collection sağlar.
+
+ » Garbage Collector Improvements
+ • Garbage Collector paralelleştirilerek çöp toplama için eşzamanlı iş parçacıkları ile daha hızlı sağlanır.
+
+ » Thread Local Handshakes
+ • Tek tek istenilen thread üzerinde callback, durdurma gibi vb işlem yapmayı sağlar.
+
+ » Root Certificates
+ • Java SE Root CA programı ile JDK’da varsayılan kök sertifika yetkilisi (CA) sağlanarak sertifikalar açık kaynak haline getirildi.
+
+ » Container Awareness
+ • Linux-based platforlarda JVM’lerin bir Docker konteynerinde çalıştırıldıklarının farkında olmalarını ve konteynere özgü konfigürasyonu çıkarmalarını sağlar.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 11 Features (2018 Eylül (LTS))
+
+ » Local-Variable Syntax for Lambda Parameters 
+ • Lambda ifadeler için yerel değişken kullanımı sağlar.
+
+ » String API new Methods
+ • String api sınıfına isBlank, lines, strip, repeat gibi faydalı methodlar eklendi.
+
+ » Reading/Writing Strings to and from the File 
+ • Dosyadan string okuma ve dosyaya string yazma işlemlerini kolaylaştıran readString, writeString, isSameFile methodlarını sağlar.
+
+ » Running Java File with single command
+ • Dosyanın önce javac ile derlenip sonra java ile çalıştırılma gerekliliğini ortadan kaldırıp, dosyayı doğrudan java komutu ile çalıştırabilmeyi sağlar ve dolaylı olarak derler.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 12 Features (2019 Mart)
+
+ » Switch Expression 
+ • Daha gelişmiş lambda destekli ( case L -> ) switch ifadesi kullanımı sağlar.
+
+ » File.mismatch Method 
+ • Path verisi verilen iki dosyayı karşılaştırmak için sağlanan yardımcı method.
+
+ » String API new Methods 
+ • String api sınıfına indent, transform, describeConstable, resolveConstantDesc gibi faydalı methodlar eklendi.
+
+ » Compact Number Formatting
+ • Belirli bir local ayar tarafından sağlanan kalıplara bağlı olarak bir sayıyı daha kısa bir biçimde temsil edebilen NumberFormat sınıfını ve getCompactNumberInstance yöntemini sağlar. ( ör: 150000 -> 150K )
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 13 Features (2019 Eylül)
+
+ » Dynamic CDS Archives
+ • Java10 versiyonunda gelen (Class-Data Sharing (CDS)) özelliğinin update olmuş halidir ve Artık sınıf paylaşımı arşivinin oluşturulması ve kullanılmasın çok daha kolay olmasını sağlar.
+
+ » Reimplement the Legacy Socket API
+ • java.net.Socket ve java.net.ServerSocket API’lerine büyük güncelleme geldi ve PlainSocketImpl sınıfı yerine, geliştirmesi ve debug yapması daha kolay olan NioSocketImpl tanıtıldı.
+
+ » Switch Expressions Updates 
+ • Java12 de yapılan lambda destekli swicth ifadelerindeki break yerine yield kullanılmaya başladı. break -> yield
+
+ » String Text Blocks
+ • Kod içinde gömülü JSON, XML, HTML vb. gibi multi-line String verileri append , stringbuilder, + vs kullanmadan metin blokları halinde kullanmayı sağlar.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 14 Features (2020 Mart)
+
+ » Switch Expression Improvements 
+ • Swicth ifadeleri daha da geliştirilerek JDK standardı haline getirilmiştir. Durum (case) başına birden çok sabite izin veren lambda ifadelerin kullanımını sağlar.
+
+ » Data Classes: record 
+ • record anahtar sözcüğüyle declare edilen Data sınıfları , otomatik olarak getter/setter, constructor, equals() gibi standart methodlara sahip olarak bazı kod parçalarından kurtulmayı sağlar.
+
+ » Pattern Matching for instanceof ( to check without Cast ) 
+ • Nesnenin türünü kontrol etmek ve kullanmak için instanceof kontrolünün ardından cast özelliğini kullanmadan işlem yapmamızı sağlar.
+
+ » Helpful NullPointerExceptions 
+ • Önceden, NullPointerException (NPE) için belirli bir sınıf ve satırda bazı değerlerin boş olduğu bildiriliyor ve hata ayıklaması-tespiti kabus olabiliyordu. Artık Java, belirli bir kod satırında tam olarak neyin-hangi verinin null olduğunu göstererek problemin kolayca çözülmesini sağlıyor.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 15 Features (2020 Eylül)
+
+ • Önceki versiyonlara oranla daha az yeni özellik bulunuyor. Daha çok 14 versiyonundaki özelliklere geliştirme ve güncellemeler gelmiş durumda.
+
+ » Sealed Classes and Interfaces
+ • Sealed(mühürlü) söz dizimi; bireysel sınıflara ve interfacelere, permits söz dizimi ile hangi sınıfların kendilerini extend veya implement ederek kullanılabileceğini bildirme izni vererek, kalıtım(inheritance) üzerinde erişim belirleyicilerden(access modifiers) daha iyi kontrol sağlamaya imkan verir.
+
+ » Record Data Class Improvements
+ • Otomatik olarak getter/setter, constructor, equals() gibi standart methodlara sahip olarak birçok kod parçasından kurtulmayı sağlayan record anahtar sözcüğüyle declare edilen Data sınıfları üzerinde iyileştirmeler yapıldı.
+
+ » Pattern Matching Type Check Iprovements
+ • Nesnenin türünü kontrol etmek instanceof kullanımı ardından cast özelliğini kullanmadan işlem yapmamızı sağlayan altyapıda iyileştirmeler yapıldı.
+╚══════════════════════════════════════════════════════════╝
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 16 Features (2021 Mart)
+
+ • Önceki versiyonlara oranla daha az yeni özellik bulunuyor. Daha çok 15 ve 14 versiyonlarında yayınlanan özelliklere güncellemeler gelmiş durumda.
+╚══════════════════════════════════════════════════════════╝
+
+
+Kaynak: https://medium.com/huawei-developers-tr/java-versiyonlar%C4%B1-ve-gelen-yenilikler-8-16-1d024561b5b9
+
+╔══════════════════════════════════════════════════════════╗
+ ► Java 17 Features (2021 Eylül)
+
+ » Restore Always-Strict Floating-Point Semantics
+ • Başlıktan da anlaşılacağı üzere bu özellik float ifadelerle ilgilidir. Bu özelliği daha iyi anlamak için biraz geçmişe gidelim. Java 1.2 ile beraber gelen yeniliklerden birisi de strictfp anahtar kelimesi idi. Bu özellik, kesirli ifadeleri hassas bir şekilde ifade etmek için kullanılan bir özelliktir. Hani böyle E’li sayılar oluyorya (örn: 1.7976931348623157E308) Mesela 23e10 ile 98e17 sayılarının toplamının 9.800000230000001E18 sayısına eşit olduğu sorduğumda true dönmesi lazım. Teoride her şey mükemmel gibi gözükse de pratik de bilgisayarlar için virgüllü sayılarda birebir aynı çözünürlükte değer hesaplamak oldukça zordur. Tutarlı hesaplamalar(bilimsel sayılarda) yapmak için strictfp anahtar kelimesini kullanırız.
+
+ » Enhanced Pseudo-Random Number Generators
+ • JEP-356, gelecekteki sözde rastgele sayı üreteci (PRNG,Pseudo Random Number Generator) algoritmalarının uygulanmasını kolaylaştırmayı amaçlayan RandomGenerator adlı yeni bir interface tanıttı.
+ • Eski(Legacy) PRNG sınıfları Random, ThreadLocalRandom ve SplittableRandom ile, çalışma zamanı değişikliklerini desteklemek için herhangi bir üst türe sahip olmadıklarından, herhangi birini bir uygulamada başka bir algoritma ile değiştirmek zordur.
+
+ • RandomGenerator arayüzünün tanıtılmasıyla, istemcinin kendi kodunda RandomGenerator türünü implement eden herhangi bir sınıfı kullanabiliriz. Yeni sınıflar şunlardır:
+
+ • SplittableGenerator – her biri aynı protokole uyan iki nesneye (orijinal ve yeni) bölünebilir.
+ • JumpableGenerator – makul bir miktarda kolayca ileri atlayabilir.
+ • LeapableGenerator – kolayca sadece zıplamakla kalmaz, aynı zamanda büyük miktarda ileri sıçrayabilir.
+ • ArbitrallyJumpableGenerator – isteğe bağlı bir miktarda, durum döngüsünde uzak bir noktaya kolayca ileri atlayabilir.
+ • StreamableGenerator – RandomGenerator nesnelerinin akışlarını döndüren yöntemler sağlamak için RandomGenerator arabirimini güçlendirir.
+ 
+ • Ayrıca Java.util.Random, SplittableRandom, ThreadLocalRandom ve SecureRandom gibi legacy random sınıflar artık yeni RandomGenerator arayüzünü implement ediyor.
+
+.... More
+╚══════════════════════════════════════════════════════════╝
